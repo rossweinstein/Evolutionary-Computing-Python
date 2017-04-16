@@ -2,7 +2,7 @@
 When given a series of x and y coordinates, this program finds an equitation that maps to those points.
 
 ## Example Gif
-...
+![ECSystem Demo Python](ECSystemPython.gif)
 
 ## About This Project
 ### Origin
