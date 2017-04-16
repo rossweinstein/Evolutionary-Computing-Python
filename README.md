@@ -22,6 +22,8 @@ To run this Evolutionary Computing System, you need to first set up a few parame
   
 Once all parameters are set, you may pass them to the ECSystem and you are ready to go.
 
+![ECSystemParameters Python](ECSystemParameters)
+
 ## Outside Code
 To evaluate the string expressions in the Evolutionary Computing System I used py-expression-eval by Axiacore.
 
