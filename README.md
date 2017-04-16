@@ -6,7 +6,7 @@ When given a series of x and y coordinates, this program finds an equation that 
 
 ## About This Project
 ### Origin
-This project was initially written in Java for a class project (details on that project can be seen here <link>).  This exercise was about seeing what it would be like to rewrite a program in a different language.
+This project was initially written in Java for a class project (details on that project can be seen here-  https://github.com/rossweinstein/Evolutionary-Computing-Java).  This exercise was about seeing what it would be like to rewrite a program in a different language.
 
 ### Functionality
 To run this Evolutionary Computing System, you need to first set up a few parameters first.
