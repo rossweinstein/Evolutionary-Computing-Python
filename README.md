@@ -1,5 +1,5 @@
 # EVOLUTIONARY COMPUTING PROJECT (PYTHON)
-When given a series of x and y coordinates, this program finds an equation that maps to those points.
+This program is able to generate an equivalent expression to a given set of x and y coordinates.
 
 ## Program Sample
 ![ECSystem Demo Python](ECSystemPython.gif)
