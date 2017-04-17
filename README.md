@@ -24,6 +24,6 @@ Once all parameters are set, you are ready to go.
 ![ECSystemParameters Python](ECParametersPython.png)
 
 ## Outside Code
-To evaluate the string expressions in the Evolutionary Computing System I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by Axiacore.
+To evaluate the string expressions in the Evolutionary Computing System I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com).
 
 
