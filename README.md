@@ -9,7 +9,7 @@ This program is able to generate an equivalent expression to a given set of x an
 This project was initially written in Java for a class project (details on that project can be seen [here](https://github.com/rossweinstein/Evolutionary-Computing-Java)).  This exercise was about seeing what it would be like to rewrite a program in a different language.
 
 ### Functionality
-To run this Evolutionary Computing System, you need to first set up a few parameters first.
+To run this Evolutionary Computing System, you need to set up a few parameters first.
 
 * Generation size => Governs the number of expressions in each generation
 * Genome size => Governs the length of the expressions in the initial population
