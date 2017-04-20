@@ -59,7 +59,7 @@ $ git clone https://github.com/rossweinstein/Evolutionary-Computing-Python
 ```
 
 ### How To Use
-To run this program, you simply pass a set of ECSystemParameters to the ECSystem class.
+To run this program, you simply pass a set of ECSystemParameters to the ECSystem class. All parameters must be set for the program to run.
 
 ```python
 params = ECSystemParameters()
