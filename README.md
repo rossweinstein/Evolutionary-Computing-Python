@@ -95,6 +95,9 @@ print(ec_system.stats)
 ### Testing
 I used PyUnit for all the testing in the project. Those tests can be seen in the [test](https://github.com/rossweinstein/Evolutionary-Computing-Python/tree/master/test) folder.
 
+### Future Improvements
+Currently, this program can only find basic expressions written with '+', '-', '\*', and '\'.  I would like to improve this program to find trigonomic functions from x and y coordinates as well.   
+
 ## Outside Code
 I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com) to evaluate the string expressions in my program.
 
