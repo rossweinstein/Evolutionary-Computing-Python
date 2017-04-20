@@ -14,7 +14,6 @@ For example, when given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266
         """
         Creates a new generation from the most fit Individuals who were both mutated
         and crossed
-        :return:
         """
 
         # make sure we only dealing with the most fit Individuals
