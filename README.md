@@ -99,6 +99,6 @@ I used PyUnit for all the testing in the project. Those tests can be seen in the
 I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com) to evaluate the string expressions in my program.
 
 ## License
-MIT License
+[MIT License](https://en.wikipedia.org/wiki/MIT_License)
 
 
