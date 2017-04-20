@@ -5,8 +5,8 @@ For example:
   
 When given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266), it program will produce an expression like:  
   
-(x/x/3)+(x+6/x\*x-x+x\*x-7-x\*x/3)
-
+    (x/x/3)+(x+6/x\*x-x+x\*x-7-x\*x/3)
+  
 ## Program Run
 ![ECSystem Demo Python](ECSystemPython.gif)
 
@@ -55,8 +55,14 @@ When given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266), it program
 ### Origin
 This is a python version of a [java program](https://github.com/rossweinstein/Evolutionary-Computing-Java) I wrote in the summer of 2016.  I am newer to python and became interested in what it would be like to rewrite a program in a different langugae.  I found this project helpful in many ways because I not only saw how much I've progressed as a developer since I wrote the original, but it also gave me a better understanding of python and java as I worked through the bugs and design decisions.
 
-### Functionality
-To run this program, you must pass a set of ECSystemParameters to the ECSystem class.
+## Installation
+This project is not available through pip.  To use the code you must clone this repository.
+```
+$ git clone https://github.com/rossweinstein/Evolutionary-Computing-Python
+```
+
+### How To
+To run this program, you simply pass a set of ECSystemParameters to the ECSystem class.
 
 ```python
 params = ECSystemParameters()
@@ -90,10 +96,10 @@ ec_system.run_ec_system()
 print(ec_system.stats)
 ```
 ### Testing
-I used PyUnit for all the testing in the project. Those tests can be seen in the [test]() folder.
+I used PyUnit for all the testing in the project. Those tests can be seen in the [test](https://github.com/rossweinstein/Evolutionary-Computing-Python/tree/master/test) folder.
 
 ## Outside Code
-I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com) to evaluate the string expressions in the Evolutionary Computing System.
+I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com) to evaluate the string expressions in my program.
 
 ## License
 MIT License
