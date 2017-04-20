@@ -1,9 +1,7 @@
 # EVOLUTIONARY COMPUTING PROJECT (PYTHON)
 This program is able to generate an expression which equates to a given set of x and y coordinates.
 
-For example:    
-  
-When given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266), it program will produce an expression like:  
+For example, when given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266), it will produce an expression like:  
   
     (x/x/3)+(x+6/x\*x-x+x\*x-7-x\*x/3)
   
