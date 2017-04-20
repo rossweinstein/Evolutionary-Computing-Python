@@ -28,9 +28,9 @@ class RandomOperand:
         a value within the range of 0 to the supplied bound.
         :return: String A newly created operand
         """
-        number_not_x = bool(getrandbits(1))
+        number_not_x = randint(0,10)
 
-        if number_not_x:
+        if number_not_x > 4:
             return str(randint(0, self._upper_limit))
         else:
             return "x"

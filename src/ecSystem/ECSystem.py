@@ -60,6 +60,7 @@ class ECSystem:
             # record all our current fitness levels
             if len(self.generation) > 0:
                 self.stats.add_most_fit_in_generation(self.generation[0])
+                print(self.generation[0].fitness)
 
             # determines if we found an equivalent expression
             if len(self.generation) > 0 and 0 <= self.generation[0].fitness <= self.parameters.success_threshold:
@@ -107,10 +108,7 @@ class ECSystem:
                                                  self.stats.number_of_gen)
 
             # combine all three lists to create new generation
-            self.generation = []
-            self.generation.extend(mutated_individuals)
-            self.generation.extend(most_fit_individuals)
-            self.generation.extend(children)
+            self.generation = mutated_individuals + most_fit_individuals + children
         else:
 
             # reboot system but continue to keep track of generation count
