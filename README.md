@@ -96,7 +96,7 @@ print(ec_system.stats)
 I used PyUnit for all the testing in the project. Those tests can be seen in the [test](https://github.com/rossweinstein/Evolutionary-Computing-Python/tree/master/test) folder.
 
 ### Future Improvements
-Currently, this program can only generate basic expressions written with '+', '-', '\*', and '/'.  I would like to improve this program to generate trigonometric functions as well.   
+Currently, this program can only generate basic expressions written with +, -, \*, and /.  I would like to improve this program to generate trigonometric functions as well.   
 
 ## Outside Code
 I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com) to evaluate the string expressions in my program.
