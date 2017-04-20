@@ -7,7 +7,7 @@ When given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266), it program
   
     (x/x/3)+(x+6/x\*x-x+x\*x-7-x\*x/3)
   
-## Program Run
+## Program Execution
 ![ECSystem Demo Python](ECSystemPython.gif)
 
 ## Sample Code
