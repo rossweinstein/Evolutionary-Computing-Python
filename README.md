@@ -1,29 +1,101 @@
 # EVOLUTIONARY COMPUTING PROJECT (PYTHON)
-This program is able to generate an equivalent expression to a given set of x and y coordinates.
+This program is able to generate an expression which equates to a given set of x and y coordinates.
 
-## Program Sample
+For example:    
+  
+When given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266), it program will produce an expression like:  
+  
+(x/x/3)+(x+6/x\*x-x+x\*x-7-x\*x/3)
+
+## Program Run
 ![ECSystem Demo Python](ECSystemPython.gif)
+
+## Sample Code
+```python
+    def _create_new_generation(self):
+        """
+        Creates a new generation from the most fit Individuals who were both mutated
+        and crossed
+        :return:
+        """
+
+        # make sure we only dealing with the most fit Individuals
+        most_fit_individuals = self._perform_selection()
+
+        self.stats.add_generation()
+
+        # makes sure we have at least 2 Individuals to work with, there are occasions when most
+        # expressions have divide by zero errors where we just need to reboot the system
+        if len(most_fit_individuals) > 1 and self._fitness_improving(most_fit_individuals[0]):
+
+            # remove and mutate selected Individuals from the List
+            mutated_individuals = self._mutation_selection(most_fit_individuals)
+
+            # each generation is kept at the same size, this determines how many children
+            # are need to make this next generation equal the generation size parameter
+            num_of_children_needed = self.parameters.generation_size \
+                                     - len(most_fit_individuals) - len(mutated_individuals)
+
+            # cross the non mutated Individuals as many times as needed
+            children = self._crossover_selection(most_fit_individuals,
+                                                 num_of_children_needed,
+                                                 self.stats.number_of_gen)
+
+            # combine all three lists to create new generation
+             self.generation = mutated_individuals + most_fit_individuals + children
+        else:
+
+            # reboot system but continue to keep track of generation count
+            self.generation = self._create_initial_population(self.stats.number_of_gen)
+            self.stagnation_count = 0
+            self.stats.add_system_rebooted()
+```
 
 ## About This Project
 ### Origin
-This project was initially written in Java for a class project (details on that project can be seen [here](https://github.com/rossweinstein/Evolutionary-Computing-Java)).  This exercise was about seeing what it would be like to rewrite a program in a different language.
+This is a python version of a [java program](https://github.com/rossweinstein/Evolutionary-Computing-Java) I wrote in the summer of 2016.  I am newer to python and became interested in what it would be like to rewrite a program in a different langugae.  I found this project helpful in many ways because I not only saw how much I've progressed as a developer since I wrote the original, but it also gave me a better understanding of python and java as I worked through the bugs and design decisions.
 
 ### Functionality
-To run this Evolutionary Computing System, you need to set up a few parameters first.
+To run this program, you must pass a set of ECSystemParameters to the ECSystem class.
 
-* Generation size => Governs the number of expressions in each generation
-* Genome size => Governs the length of the expressions in the initial population
-* Training Data => The x and y values used to evalute an expression's fitness
-* Fitness Threshold => The percentage of the population selected for the next generation
-* Stagnation Threshold => If our fitness is not improving over this set number of generations, the EC System reboots
-* Mutation Percentage => Governs the ratio of expressions crossed to expressions mutated
-* Success Threshold => Defines the minimum fitness value required for the system to deem the expression equivalent
+```python
+params = ECSystemParameters()
 
-Once all parameters are set, you are ready to go.
+# Governs the number of expressions in each generation
+params.generation_size = 200
 
-![ECSystemParameters Python](ECParametersPython.png)
+# Governs the length of the expressions in the initial population
+params.genome_size = 15
+
+# The percentage of the population selected for the next generation
+params.fitness_threshold = 0.2
+
+# If our fitness is not improving over this set number of generations, the EC System reboots
+params.stagnation_threshold = 30
+
+# The percentage of the population selected for mutation
+params.mutation_percentage = .1
+
+# Minimum fitness value required for the system to deem the expression equivalent to training data
+params.success_threshold = 0.01
+
+# Trainging Data: The x and y values used to evaluate the expression's fitness
+params.x_training_data = [-55.0, -35.0, -11.0, -1.0, 1.0, 19.0, 87.0, 101.0]
+params.y_training_data = [1512.0, 612.0, 60, 0.0, 0.0, 180.0, 3784, 5100.0]
+
+ec_system = ECSystem(params)
+ec_system.run_ec_system()
+
+# System results
+print(ec_system.stats)
+```
+### Testing
+I used PyUnit for all the testing in the project. Those tests can be seen in the [test]() folder.
 
 ## Outside Code
-To evaluate the string expressions in the Evolutionary Computing System I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com).
+I used [py-expression-eval](https://github.com/Axiacore/py-expression-eval) by [Axiacore](https://axiacore.com) to evaluate the string expressions in the Evolutionary Computing System.
+
+## License
+MIT License
 
 
