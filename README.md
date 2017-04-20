@@ -58,7 +58,7 @@ This project is not available through pip.  To use the code you must clone this 
 $ git clone https://github.com/rossweinstein/Evolutionary-Computing-Python
 ```
 
-### How To
+### How To Use
 To run this program, you simply pass a set of ECSystemParameters to the ECSystem class.
 
 ```python
