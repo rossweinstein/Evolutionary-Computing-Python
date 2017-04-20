@@ -5,7 +5,7 @@ For example, when given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266
   
     (x/x/3)+(x+6/x\*x-x+x\*x-7-x\*x/3)
   
-## Sample Execution
+## Sample Output
 ![ECSystem Demo Python](ECSystemPython.gif)
 
 ## Sample Code
