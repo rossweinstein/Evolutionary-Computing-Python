@@ -50,7 +50,7 @@ For example, when given the coordinates (-31, 640), (-11,80), (1,0) and (20, 266
 
 ## About This Project
 ### Origin
-This is a python version of a [java program](https://github.com/rossweinstein/Evolutionary-Computing-Java) I wrote in the summer of 2016.  I am newer to python and became interested in what it would be like to rewrite a program in a different langugae.  I found this project helpful in many ways because I not only saw how much I've progressed as a developer since I wrote the original, but it also gave me a better understanding of python and java as I worked through the bugs and design decisions.
+This is a python version of a [java program](https://github.com/rossweinstein/Evolutionary-Computing-Java) I wrote in the summer of 2016.  I found this project helpful in many ways because I not only saw how much I've progressed as a developer since I wrote the original, but it also gave me a better understanding of python and java as I worked through the bugs and design decisions.
 
 ### Installation
 This project is not available through pip.  To use the code you must clone this repository.
